@@ -28,7 +28,7 @@
 						event.preventDefault();
 					}
 					if(event.keyCode==13){
-						var el = document.querySelectorAll("h3.r")[document.selectedResultId];
+						var el = document.querySelectorAll(".r")[document.selectedResultId];
 						var lnk = el.querySelector("a");
 						var url = lnk.href;
 						if(event.ctrlKey){
@@ -53,10 +53,10 @@
 		}
 	};
 	function selectResult(newId){
-		var els = [].slice.call(document.querySelectorAll("h3.r"));
+		var els = [].slice.call(document.querySelectorAll(".r"));
 		newId = newId%els.length;
 		var oldElsLength = els.length;
-		var badEntries = document.querySelector("#irq") == null ? [] : document.querySelector("#irq").querySelectorAll("h3.r");
+		var badEntries = document.querySelector("#irq") == null ? [] : document.querySelector("#irq").querySelectorAll(".r");
 					badEntries = [].slice.call(badEntries); // these ones are the results inside the 'people also search for' box
 					var firstmatch = true;
 					for(var i = badEntries.length - 1; i>=0; i--) {
